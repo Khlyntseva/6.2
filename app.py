@@ -4,12 +4,15 @@ def add(x, y):
 def subtract(x,y):
     return x - y
 
+def division(x, y):
+    return x / y
+
 if __name__ == "__main__":
     print("Simple Calculator App")
     
     try:
         num1 = int(input("Enter the first number: "))
-        operation = input("Enter operation (+ for addition, - for subtraction): ")
+        operation = input("Enter operation (+ for addition, - for subtraction, / for division): ")
         num2 = int(input("Enter the second number: "))
     except ValueError:
         print("Invalid input. Please enter valid numbers.")
@@ -23,5 +26,8 @@ if __name__ == "__main__":
     elif operation == "-":
         result = subtract(num1, num2)
         print(f"{num1} - {num2} = {result}")
+    elif operation == "/":
+        result = division(num1, num2)
+        print(f"{num1} / {num2} = {result}")    
     else:
         print("Invalid operation. Please enter + for addition or - for subtraction.")
